@@ -12,6 +12,8 @@ if($selectId){
 }else{
     header('location:client-index.php');
 }
+
+$cities = $crud->select('city');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +43,14 @@ if($selectId){
             <label>Email
                 <input type="email" name="email"  value="<?= $email;?>">
             </label>
+            <label for="city">City</label>
+            <select name="city_id" id="city">
+                <?php foreach ($cities as $city): ?>
+                    <option value="<?= $city['id']; ?>" <?= ($city['id'] == $city_id) ? 'selected' : ''; ?>>
+                        <?= $city['name']; ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
             <input type="submit" class="btn" value="Update">
         </form>
     </div>

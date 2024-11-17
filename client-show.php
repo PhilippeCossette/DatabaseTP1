@@ -8,7 +8,6 @@ require_once("classes/CRUD.php");
 
 $crud = new CRUD;
 $selectId = $crud->selectId('client', $_GET["id"]);
-print_r($selectId);
 if($selectId){
     extract($selectId);
 

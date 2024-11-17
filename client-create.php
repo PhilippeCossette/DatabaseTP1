@@ -1,6 +1,7 @@
 <?php
 require_once('classes/CRUD.php');
 
+
 $crud = new CRUD;
 
 $select = $crud->select('city', 'name', 'ASC');

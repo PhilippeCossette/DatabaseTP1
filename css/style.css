@@ -1,5 +1,11 @@
+:root {
+    --button-color:#31e54f ;
+    --table-header-color: #484948;
+    --delete-button-color: #d20b39;
+}
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 20px;
 }
 
@@ -9,14 +15,15 @@ table {
 }
 
 th {
-    background-color: #333;
+    background-color: var(--table-header-color);
     color: #fff;
     text-align: left;
     padding: 10px;
+    border: 1px solid var(--table-header-color);
 }
 
 td {
-    border: 1px solid #333;
+    border: 1px solid var(--table-header-color);
     padding: 10px;
 }
 
@@ -38,6 +45,10 @@ label {
     font-weight: bold;
 }
 
+a {
+    color: var(--button-color);
+}
+
 input, select {
     width: 100%;
     padding: 5px;
@@ -54,24 +65,24 @@ input, select {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border: 2px solid #3498db;
-    color: #3498db;
+    border: 2px solid ;
+    color: var(--button-color);
     border-radius: 5px;
     background-color: #fff;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #3498db;
+    background-color: var(--button-color);
     color: #fff;
 }
 
 .btn.red {
-    border: 2px solid #98082a;
-    color: #db3450; 
+    border: 2px solid var(--delete-button-color);
+    color: var(--delete-button-color); 
 }
 
 .btn.red:hover {
-    background-color: #db3450;
+    background-color: var(--delete-button-color);
     color: #fff;
 }
